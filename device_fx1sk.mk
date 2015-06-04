@@ -21,60 +21,69 @@ else
 endif
 
 PRODUCT_PACKAGES += \
-    libwpa_client \
-    hostapd \
-    dhcpcd.conf \
-    wpa_supplicant \
-    wpa_supplicant.conf \
-    lights.msm8960 \
-    charger_res_images \
-    libstlport \
-    nfc_nci.bcm2079x.default \
-    NfcNci \
-    Tag \
-    librs_jni \
-    com.android.future.usb.accessory \
-    e2fsck \
-    libgenlock \
-    liboverlay \
-    hwcomposer.msm8960 \
-    gralloc.msm8960 \
-    copybit.msm8960 \
-    memtrack.msm8960 \
-    audio.primary.msm8960 \
-    audio.a2dp.default \
-    audio.usb.default \
-    audio.r_submix.default \
-    libaudio-resampler \
-    libqcomvoiceprocessing \
-    hci_qcomm_init \
-    power.msm8960 \
-    camera.msm8960 \
-    libmmcamera_interface2 \
-    libmmcamera_interface \
-    libmm-omxcore \
-    libdivxdrmdecrypt \
-    libOmxVdec \
-    libOmxVenc \
-    libOmxCore \
-    libstagefrighthw \
-    libc2dcolorconvert \
-    libloc_adapter \
-    libloc_eng \
-    libloc_api_v02 \
-    libloc_ds_api \
-    libloc_core \
-    libizat_core \
-    libgeofence \
-    libgps.utils \
-    gps.msm8960 \
-    flp.msm8960 \
-    bdAddrLoader \
-    libwfcu \
-    conn_init \
-    keystore.msm8960 \
-    wpa_supplicant_overlay.conf \
-    p2p_supplicant_overlay.conf
+        librs_jni \
+        nfc.msm8960 \
+        libnfc \
+        libnfc_jni \
+        Nfc \
+        Tag \
+        com.android.nfc_extras \
+        charger_res_images \
+        charger \
+        make_ext4fs \
+	power.msm8960 \
+	librs_jni \
+	com.android.future.usb.accessory \
+	e2fsck \
+	libgenlock \
+	liboverlay \
+	hwcomposer.msm8960 \
+	gralloc.msm8960 \
+	copybit.msm8960 \
+	memtrack.msm8960 \
+	audio_policy.msm8960 \
+	audio.primary.msm8960 \
+	audio.a2dp.default \
+	audio.usb.default \
+	audio.r_submix.default \
+	libaudio-resampler \
+	libqcomvoiceprocessing \
+        libmm-omxcore \
+	libdivxdrmdecrypt \
+	libOmxVdec \
+	libOmxVenc \
+	libOmxCore \
+	libstagefrighthw \
+	libc2dcolorconvert \
+	hdmid \
+	libgps.utils \
+	libgeofence \
+	libloc_adapter \
+	libloc_eng \
+	libloc_api_v02 \
+	libloc_ds_api \
+	libloc_core \
+	libizat_core \
+	gps.msm8960 \
+	hwaddrs \
+        hci_qcomm_init \
+        lights.msm8960 \
+        f2fs-tools \
+        exfat \
+        ffmpeg \
+        naver-fonts \
+	brcm_patchram_plus \
+	recovery-transform.sh \
+	hostapd \
+	dhcpcd.con\
+	wpa_supplicant \
+	wpa_supplicant.conf \
+	keystore.msm8960 \
+	flp.msm8960 \
+	hostapd_default.conf \
+	wpa_supplicant_overlay.conf \
+	p2p_supplicatn_overlay.conf \
+	healthd
 
 PRODUCT_COPY_FILES += \
         $(LOCAL_KERNEL):kernel \
@@ -173,6 +182,8 @@ PRODUCT_TAGS += dalvik.gc.type-precise
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 	rild.libpath=/system/lib/libril-qc-qmi-1.so \
 	persist.sys.usb.config=mtp	
+
+$(shell mkdir -p out/target/product/fx1sk/obj/KERNEL_OBJ/usr/)
 
 $(call inherit-product, hardware/qcom/msm8960/msm8960.mk)
 $(call inherit-product, frameworks/base/data/sounds/AudioPackage10.mk)

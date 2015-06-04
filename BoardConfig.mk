@@ -1,7 +1,5 @@
 BOARD_VENDOR := lge
 
-TARGET_SPECIFIC_HEADER_PATH := device/lge/fx1sk/Addon/include
-
 USE_CAMERA_STUB := true
 
 # inherit from the proprietary version
@@ -93,7 +91,7 @@ BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := default
 BOARD_VENDOR_QCOM_GPS_LOC_API_AMSS_VERSION := 1240
 
 # RIL
-#BOARD_RIL_CLASS := ../../../device/lge/fx1sk/Addon/ril/
+BOARD_RIL_CLASS := ../../../device/lge/fx1sk/Addon/ril/
 
 # Overlay
 TARGET_USES_ION := true

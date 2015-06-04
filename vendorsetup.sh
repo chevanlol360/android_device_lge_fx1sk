@@ -1,2 +1,3 @@
 add_lunch_combo cm_fx1sk-userdebug
 add_lunch_combo cm_fx1sk-user
+add_lunch_combo cm_fx1sk-eng

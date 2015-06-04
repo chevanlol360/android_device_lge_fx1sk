@@ -1,0 +1,14 @@
+[
+  {
+    "repository": "android_device_lge_fx1sk",
+    "target_path": "device/lge/fx1sk"
+  }
+  {
+    "repository": "proprietary_vendor_lge_fx1sk",
+    "target_path": "vendor/lge/fx1sk"
+  }
+  {
+    "repository": "android_bootable_recovery",
+    "target_path": "bootable/recovery-twrp"
+  }
+]
